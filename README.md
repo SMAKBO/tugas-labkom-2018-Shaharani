@@ -1,7 +1,7 @@
 # tugas-labkom-2018-Shaharani
 tugas-labkom-2018-Shaharani created by GitHub Classroom
 > Kelas XI-5
-Nama Anggota:
+> Nama Anggota:
 1. Ainira Azkarunisa ; Research; 16.62.08282
 2. Aqilla Fadia Rahmani ; Design; 16.62.08305
 3. Khansa Nabila Hasan ; Programer; 16.62.08386
