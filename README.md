@@ -2,9 +2,12 @@
 tugas-labkom-2018-Shaharani created by GitHub Classroom
 > Desflurane
 
-> Kelas XI-5
+> Kelas 
+
+XI-5
 
 > Nama Ketua: 
+
 Shaharani Tiara Putri/ 16.62.08518/ 
 
 > Nama Anggota:
