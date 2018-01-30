@@ -6,6 +6,7 @@ tugas-labkom-2018-Shaharani created by GitHub Classroom
 
 > Nama Ketua: 
 Shaharani Tiara Putri/ 16.62.08518/ 
+
 > Nama Anggota:
 1. Ainira Azkarunisa ; Research; 16.62.08282
 2. Aqilla Fadia Rahmani ; Design; 16.62.08305
