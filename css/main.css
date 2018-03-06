@@ -1,6 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Glegoo);
+
+<head>
+<style>
+body {
+    background-color: lightblue;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+}
+</style>
+</head>
 body {
   font-family: 'Roboto', sans-serif;
 }
