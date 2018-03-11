@@ -112,46 +112,31 @@ HTML: <!--dokumentasi-->
 CSS: 
 
 <head>
-    <style>
-.box{
-    align-items: right
-    background-color:#52143d;
-    border-left:10px solid #bbb;
-    border-radius:10px;
-    width:90%;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    padding:15px 20px;
-    color:#faeaf5;
-}
-    </style>
-
-    <style>
-
-
-        h2 {
-    color: #1f2e2e;
-    text-align: center;
-    text-decoration: underline;
-
-
-    </style>
-    <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
     box-sizing: border-box;
 }
 
-/* Create two equal columns that floats next to each other */
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* The grid: Three equal columns that floats next to each other */
 .column {
     float: left;
-    width: 50%;
-    padding: 30px;
-     /* Should be removed. Only for demonstration */
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+.containerTab {
+    padding: 20px;
+    color: white;
 }
 
 /* Clear floats after the columns */
@@ -160,19 +145,41 @@ CSS:
     display: table;
     clear: both;
 }
+
+/* Closable button inside the container tab */
+.closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
 </style>
 </head>
 <body>
 
-<h2> 
-    <h1>Desflurane? What is that?</h1>
-</h2>
+<div style="text-align:center">
+  <h2>Desflurane? What is that?</h2>
+  <p>Click on the boxes below:</p>
+</div>
 
+<!-- Three columns -->
 <div class="row">
-  <div class="column" style="background-color:#d1e0e0;">
-    <h2>DEFINITION</h2>
+  <div class="column" onclick="openTab('b1');" style="background:#d1e0e0;">
+    Definition
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:#f0f5f5;">
+    Pharmacology
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:#e0ebeb;">
+    Brand
+  </div>
+</div>
 
-            <p>
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:#d1e0e0">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Definition</h2>
+  <p><p>
                 <left><img src="img/rane.png" width="300px" height="150px"></left>
                 <img src="img/des.png">
             </p> 
@@ -191,12 +198,14 @@ CSS:
 
             <p>
                 Desflurane, along with enflurane and to a lesser extent isoflurane, has been shown to react with the carbon dioxide <br>absorbent in anesthesia circuits to produce detectable levels of carbon monoxide through degradation of the anesthetic agent. The CO2 absorbent Baralyme, when dried, is most culpable for the production of carbon monoxide from desflurane degradation, although it is also seen with soda lime absorbent as well. Dry conditions in the carbon dioxide absorbent are conducive to this phenomenon, such as those resulting from high fresh gas flows. 
-            </p></p>
-  </div>
-  <div class="column" style="background-color:#f0f5f5;">
-    <h2>PHARMACOLOGY</h2>
+            </p></p></p>
+</div>
 
-            <h3>Mechanism of Action</h3>
+<div id="b2" class="containerTab" style="display:none;background:#f0f5f5">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Pharmacology</h2>
+  <p>
+  <h3>Mechanism of Action</h3>
 
             <p>Volatile liquid inhalation anesthetic, may enhance inhibitory postsynaptic channel activity and may inhibit excitatory synaptic activity</p>
 
@@ -211,13 +220,29 @@ CSS:
 
             <h3>Pharmacogenomics</h3>
             <p>Increased incidence of malignant hyperthermia with use of volatile anesthetics or depolarizing neuromuscular blockers in patients with gene mutations in ryanodine receptor (RYR1) or calcium channel alpha (1S)- subunit gene (CACNA1S)</p>
+    </p>
             
-            <h3>This is one of brand that produce Desflurane</h3>
-            <p><img src="img/flu.jpg" width="200" height="400"> <h3><i>SUPRANE</i></h3></p>
-  </div>
 </div>
 
+<div id="b3" class="containerTab" style="display:none;background:#e0ebeb">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Brand</h2>
+  <p><p><img src="img/flu.jpg" width="200" height="400"> <B><i>SUPRANE</i></B></p></p>
+</div>
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
 </body>
+
 
 
  <footer id="footer">
