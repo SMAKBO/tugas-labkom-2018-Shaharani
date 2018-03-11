@@ -118,7 +118,12 @@ CSS:
     background-color:#52143d;
     border-left:10px solid #bbb;
     border-radius:10px;
-    width:90%;
+    width:90%;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     padding:15px 20px;
     color:#faeaf5;
 }
@@ -133,18 +138,38 @@ CSS:
 
 
     </style>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
 </head>
+<body>
 
-<head> 
-
+<h2> 
     <h1>Desflurane? What is that?</h1>
+</h2>
 
-</head>
-
-
-    <body>
-
-        <h2>Definition</h2>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Definition</h2>
 
             <p>
                 <left><img src=https://commons.wikimedia.org/wiki/File:Desflurane.svg></left> <img src="http://www.baxter.com.pr/healthcare_professionals/products/suprane.html"><img src="https://en.wikipedia.org/wiki/Desflurane">
@@ -164,9 +189,11 @@ CSS:
 
             <p>
                 Desflurane, along with enflurane and to a lesser extent isoflurane, has been shown to react with the carbon dioxide <br>absorbent in anesthesia circuits to produce detectable levels of carbon monoxide through degradation of the anesthetic agent. The CO2 absorbent Baralyme, when dried, is most culpable for the production of carbon monoxide from desflurane degradation, although it is also seen with soda lime absorbent as well. Dry conditions in the carbon dioxide absorbent are conducive to this phenomenon, such as those resulting from high fresh gas flows. 
-            </p>
+            </p></p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Pharmacology</h2>
 
-        <h2>Pharmacology</h2>
             <h3>Mechanism of Action</h3>
 
             <p>Volatile liquid inhalation anesthetic, may enhance inhibitory postsynaptic channel activity and may inhibit excitatory synaptic activity</p>
@@ -182,9 +209,13 @@ CSS:
 
             <h3>Pharmacogenomics</h3>
             <p>Increased incidence of malignant hyperthermia with use of volatile anesthetics or depolarizing neuromuscular blockers in patients with gene mutations in ryanodine receptor (RYR1) or calcium channel alpha (1S)- subunit gene (CACNA1S)</p>
+</p>
+  </div>
+</div>
 
-        
-    </body>
+</body>
+
+
  <footer id="footer">
                 <div class="container">
                     <div class="col-md-8">
