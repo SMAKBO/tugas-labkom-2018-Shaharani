@@ -112,30 +112,30 @@ HTML: <!--dokumentasi-->
 CSS: 
 
 <head>
+
+    <style>
+
+
+        h2 {
+    color: #1f2e2e;
+    text-align: center;
+    text-decoration: underline;
+
+
+    </style>
+    <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-}
-
-/* The grid: Three equal columns that floats next to each other */
+/* Create two equal columns that floats next to each other */
 .column {
     float: left;
-    width: 33.33%;
-    padding: 50px;
-    text-align: center;
-    font-size: 25px;
-    cursor: pointer;
-    color: white;
-}
-
-.containerTab {
-    padding: 20px;
-    color: black;
+    width: 50%;
+    padding: 30px;
+     /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -144,60 +144,21 @@ body {
     display: table;
     clear: both;
 }
-
-/* Closable button inside the container tab */
-.closebtn {
-    float: right;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
-}
 </style>
-
-<style>
-
-
-        h2 {
-    color: #1f2e2e;
-    text-align: center;
-    text-decoration: italic;
-
-
-</style>
-
 </head>
 <body>
 
-    <div style="text-align:center">
-  <h2>Desflurane? What is that?</h2>
-  <p>__________________________</p>
-</div>
+<h2> 
+    <h1>Desflurane? What is that?</h1>
+</h2>
 
-<div style="text-align:center">
-  <h2>DESFLURANE? What is that???</h2>
-  <p>Click on the boxes below:</p>
-</div>
-
-<!-- Three columns -->
 <div class="row">
-  <div class="column" onclick="openTab('b1');" style="background:#a3c2c2;">
-    DEFINITION
-  </div>
-  <div class="column" onclick="openTab('b2');" style="background:#d1e0e0;">
-    PHARMACOLOGY
-  </div>
-  <div class="column" onclick="openTab('b3');" style="background:#f0f5f5;">
-    BRAND 
-  </div>
-</div>
+  <div class="column" style="background-color:#d1e0e0;">
+    <h2>DEFINITION</h2>
 
-<!-- Full-width columns: (hidden by default) -->
-<div id="b1" class="containerTab" style="display:none;background:#a3c2c2">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h2>DEFINITION</h2>
-  <p><p>
-                <left><img src="img/rane.png" width="400px" height="190px"></left>
-                <img src="img/des.png"> <img src="img/desflu.png" width="400px" height="180px">
+            <p>
+                <left><img src="img/rane.png" width="300px" height="150px"></left>
+                <img src="img/des.png">
             </p> 
 
             <p>
@@ -213,15 +174,13 @@ body {
             </p>
 
             <p>
-                Desflurane, along with enflurane and to a lesser extent isoflurane, has been shown to react with the carbon dioxide absorbent in anesthesia circuits to produce detectable levels of carbon monoxide through degradation of the anesthetic agent. The CO2 absorbent Baralyme, when dried, is most culpable for the production of carbon monoxide from desflurane degradation, although it is also seen with soda lime absorbent as well. Dry conditions in the carbon dioxide absorbent are conducive to this phenomenon, such as those resulting from high fresh gas flows. 
-            </p></p></p>
-</div>
+                Desflurane, along with enflurane and to a lesser extent isoflurane, has been shown to react with the carbon dioxide <br>absorbent in anesthesia circuits to produce detectable levels of carbon monoxide through degradation of the anesthetic agent. The CO2 absorbent Baralyme, when dried, is most culpable for the production of carbon monoxide from desflurane degradation, although it is also seen with soda lime absorbent as well. Dry conditions in the carbon dioxide absorbent are conducive to this phenomenon, such as those resulting from high fresh gas flows. 
+            </p></p>
+  </div>
+  <div class="column" style="background-color:#f0f5f5;">
+    <h2>PHARMACOLOGY</h2>
 
-<div id="b2" class="containerTab" style="display:none;background:#d1e0e0">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h2>PHARMACOLOGY</h2>
-  <p>
-  <h3>Mechanism of Action</h3>
+            <h3>Mechanism of Action</h3>
 
             <p>Volatile liquid inhalation anesthetic, may enhance inhibitory postsynaptic channel activity and may inhibit excitatory synaptic activity</p>
 
@@ -236,36 +195,19 @@ body {
 
             <h3>Pharmacogenomics</h3>
             <p>Increased incidence of malignant hyperthermia with use of volatile anesthetics or depolarizing neuromuscular blockers in patients with gene mutations in ryanodine receptor (RYR1) or calcium channel alpha (1S)- subunit gene (CACNA1S)</p>
-    </p>
             
+            <h3>This is one of brand that produce Desflurane</h3>
+            <p><img src="img/flu.jpg" width="200" height="400"> <B><i>SUPRANE</i></B></p>
+  </div>
 </div>
-
-<div id="b3" class="containerTab" style="display:none;background:#f0f5f5">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
- 
-  <h2>BRAND</h2>
-  <p><p><img src="img/flu.jpg" width="200" height="400"> <img src="img/suprane.png" width="300" height="300"> <img src="img/Desflurane.jpg" width="250" height="330"> <B><i>SUPRANE</i></B></p></p>
-</div>
-
-<script>
-function openTab(tabName) {
-  var i, x;
-  x = document.getElementsByClassName("containerTab");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
-}
-</script>
 
 </body>
-
 
 
  <footer id="footer">
                 <div class="container">
                     <div class="col-md-8">
-                       Maintained by <i class="fa fa-love"></i><a href="https://shaharani.github.io/">Shaharani Tiara Putri</a>
+                       Maintained by <i class="fa fa-love"></i><a href="shaharani.github.io/">Shaharani Tiara Putri</a>
                     </div>
                 </div>
             </footer> <!-- /#footer -->  
