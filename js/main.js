@@ -1,118 +1,66 @@
-(function($){
-    $.fn.scrollingTo = function( opts ) {
-        var defaults = {
-            animationTime : 1000,
-            easing : '',
-            callbackBeforeTransition : function(){},
-            callbackAfterTransition : function(){}
-        };
+/*
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
 
-        var config = $.extend( {}, defaults, opts );
+(function($) {
 
-        $(this).click(function(e){
-            var eventVal = e;
-            e.preventDefault();
+	// Breakpoints.
+		skel.breakpoints({
+			xlarge:	'(max-width: 1680px)',
+			large:	'(max-width: 1280px)',
+			medium:	'(max-width: 980px)',
+			small:	'(max-width: 736px)',
+			xsmall:	'(max-width: 480px)'
+		});
 
-            var $section = $(document).find( $(this).data('section') );
-            if ( $section.length < 1 ) {
-                return false;
-            };
+	$(function() {
 
-            if ( $('html, body').is(':animated') ) {
-                $('html, body').stop( true, true );
-            };
+		var	$window = $(window),
+			$body = $('body');
 
-            var scrollPos = $section.offset().top;
+		// Disable animations/transitions until the page has loaded.
+			$body.addClass('is-loading');
 
-            if ( $(window).scrollTop() == scrollPos ) {
-                return false;
-            };
+			$window.on('load', function() {
+				window.setTimeout(function() {
+					$body.removeClass('is-loading');
+				}, 100);
+			});
 
-            config.callbackBeforeTransition(eventVal, $section);
+		// Prioritize "important" elements on medium.
+			skel.on('+medium -medium', function() {
+				$.prioritize(
+					'.important\\28 medium\\29',
+					skel.breakpoint('medium').active
+				);
+			});
 
-            $('html, body').animate({
-                'scrollTop' : (scrollPos+'px' )
-            }, config.animationTime, config.easing, function(){
-                config.callbackAfterTransition(eventVal, $section);
-            });
-        });
-    };
-}(jQuery));
+	// Off-Canvas Navigation.
 
+		// Navigation Panel.
+			$(
+				'<div id="navPanel">' +
+					$('#nav').html() +
+					'<a href="#navPanel" class="close"></a>' +
+				'</div>'
+			)
+				.appendTo($body)
+				.panel({
+					delay: 500,
+					hideOnClick: true,
+					hideOnSwipe: true,
+					resetScroll: true,
+					resetForms: true,
+					side: 'left'
+				});
 
+		// Fix: Remove transitions on WP<10 (poor/buggy performance).
+			if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
+				$('#navPanel')
+					.css('transition', 'none');
 
-jQuery(document).ready(function(){
-	"use strict";
-	new WOW().init();
+	});
 
-
-(function(){
- jQuery('.smooth-scroll').scrollingTo();
-}());
-
-});
-
-
-
-
-$(document).ready(function(){
-
-
-
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 50) {
-            $(".navbar-brand a").css("color","#fff");
-            $("#top-bar").removeClass("animated-header");
-        } else {
-            $(".navbar-brand a").css("color","inherit");
-            $("#top-bar").addClass("animated-header");
-        }
-    });
-
-    $("#clients-logo").owlCarousel({
- 
-        itemsCustom : false,
-        pagination : false,
-        items : 5,
-        autoplay: true,
-
-    })
-
-});
-
-
-
-// fancybox
-$(".fancybox").fancybox({
-    padding: 0,
-
-    openEffect : 'elastic',
-    openSpeed  : 450,
-
-    closeEffect : 'elastic',
-    closeSpeed  : 350,
-
-    closeClick : true,
-    helpers : {
-        title : { 
-            type: 'inside' 
-        },
-        overlay : {
-            css : {
-                'background' : 'rgba(0,0,0,0.8)'
-            }
-        }
-    }
-});
-
-
-
-
-
-
- 
-
-
-
-
+})(jQuery);
