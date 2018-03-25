@@ -1,27 +1,26 @@
-.h2 {
+body 
+    #grad1 {
+    height: 200px;
+    background: #d1e0e0 ;
+    background: linear-gradient(to  #d1e0e0, #c2d6d6, #b3cccc, #a3c2c2, #94b8b8 , #85adad);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
     color: white;
     text-align: center;
     text-decoration: bold;
-    background-color: #95b7b7
-
-{
-    box: border-box;
+    
 }
 
-div
-.column {
+p {
+    font-family: arial;
+    font-size: 20px;
     float: left;
-    width: 50%;
-    padding: 30px;
-    background-color:#f0f5f5;
-     
-}
-
-div
-.row: {
-    content: "";
-    display: table;
-    clear: both;
-    background-color:#d1e0e0;
+    padding: 30px
 }
 
