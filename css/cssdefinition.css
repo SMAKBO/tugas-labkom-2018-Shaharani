@@ -21,6 +21,9 @@ h3 {
 	color: #293d3d;
 	padding:10px;
 }
+	.box{
+	color: #f0f5f5;
+	}
 p {
     font-family: arial;
     padding: 30px;
@@ -33,7 +36,6 @@ ul
 	padding:30px;
 }
 
-p 
 	.border1{
 	color: black;
 	background-color: #f0f5f5;
@@ -51,5 +53,7 @@ p
     padding: 25px;
     margin: 25px;
 	}
+
+
 
 	
