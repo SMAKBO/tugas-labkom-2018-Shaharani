@@ -34,7 +34,7 @@ ul
 	.a{
 	list-style-type: circle;
 	padding:30px;
-}
+	}
 
 	.border1{
 	float: left;
@@ -47,7 +47,7 @@ ul
 	}
 
 	.border2{
-	float: center;
+	float: left;
 	color: white;
 	background-color: #334d4d;
     width: 200px;
@@ -56,15 +56,6 @@ ul
     margin: 25px;
 	}
 
-	.border3{
-	float: right;
-	color: black;
-	background-color: #f0f5f5;
-    width: 300px;
-    border: 25px #334d4d;
-    padding: 25px;
-    margin: 25px;
-	}
 
 
 	
