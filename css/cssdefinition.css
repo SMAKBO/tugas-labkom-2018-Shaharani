@@ -1,0 +1,32 @@
+<head>
+
+    <style>
+
+
+        h2 {
+    color: white;
+    text-align: center;
+    text-decoration: bold;
+    background-color: #95b7b7
+
+{
+    box: border-box;
+}
+
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 30px;
+    background-color:#f0f5f5;
+     
+}
+
+
+.row: {
+    content: "";
+    display: table;
+    clear: both;
+    background-color:#d1e0e0;
+}
+
