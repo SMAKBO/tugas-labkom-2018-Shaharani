@@ -50,11 +50,16 @@ ul
 	float: left;
 	color: white;
 	background-color: #334d4d;
-    width: 200px;
+    width: 300px;
     border: 25px #f0f5f5;
     padding: 25px;
     margin: 25px;
 	}
+
+	.after-border{
+    clear: left;
+      
+}
 
 
 
