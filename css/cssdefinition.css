@@ -13,7 +13,7 @@
     box: border-box;
 }
 
-
+div
 .column {
     float: left;
     width: 50%;
@@ -22,7 +22,7 @@
      
 }
 
-
+div
 .row: {
     content: "";
     display: table;
