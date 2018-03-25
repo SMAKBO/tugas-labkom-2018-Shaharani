@@ -26,3 +26,7 @@ p {
     padding: 30px;
 }
 
+ul {
+	shape-rendering: square;
+	padding:30px;
+}
