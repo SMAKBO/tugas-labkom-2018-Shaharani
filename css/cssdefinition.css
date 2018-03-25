@@ -1,6 +1,5 @@
 body 
     #grad1 {
-    height: 200px;
     background: #d1e0e0 ;
     background: linear-gradient(to  #d1e0e0, #c2d6d6, #b3cccc, #a3c2c2, #94b8b8 , #85adad);
 }
@@ -8,13 +7,15 @@ body
 h1 {
     color: white;
     text-align: center;
+
 }
 
 h2 {
     color: white;
     text-align: center;
     text-decoration: bold;
-    
+    padding: 10px
+    background-color: #669999
 }
 
 p {
