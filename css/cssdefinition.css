@@ -18,12 +18,11 @@ h2 {
 }
 
 h3 {
-	color: #293d3d;
-	padding:10px;
-}
-	.box{
 	color: #f0f5f5;
-	}
+	padding:10px;
+	text-align: center;
+}
+
 p {
     font-family: arial;
     padding: 30px;
@@ -38,8 +37,8 @@ ul
 
 	.border1{
 	float: left;
-	color: black;
-	background-color: #f0f5f5;
+	color: white;
+	background-color: #3d5c5c;
     width: 300px;
     border: 25px #334d4d;
     padding: 25px;
@@ -49,9 +48,19 @@ ul
 	.border2{
 	float: left;
 	color: white;
-	background-color: #334d4d;
+	background-color: #669999;
     width: 300px;
     border: 25px #f0f5f5;
+    padding: 25px;
+    margin: 25px;
+	}
+
+	.border3{
+	float: left;
+	color: white;
+	background-color: #94b8b8;
+    width: 300px;
+    border: 25px #334d4d;
     padding: 25px;
     margin: 25px;
 	}
