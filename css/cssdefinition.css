@@ -14,16 +14,15 @@ h2 {
     color: white;
     text-align: center;
     text-decoration: bold;
-    background: #669999
+    background: #669999;
 }
 
 h3 {
-	color: #293d3d
+	color: #293d3d;
 	padding:10px;
 }
 p {
     font-family: arial;
-    font-size: 20px
     padding: 40px;
 }
 
